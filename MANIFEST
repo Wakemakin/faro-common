@@ -1,0 +1,9 @@
+.venv
+MANIFEST
+RELEASE
+README.rst
+faro_common
+requirements
+setup.cfg
+setup.py
+tox.ini
