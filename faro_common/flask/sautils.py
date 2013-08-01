@@ -4,6 +4,7 @@ import urlparse
 
 import faro_common.exceptions.common as exc
 import faro_common.utils as utils
+import faro_common.flask as flaskutils
 
 
 def get_object(key, object_type, filter_key, alternate_key_column=None):
@@ -12,7 +13,7 @@ def get_object(key, object_type, filter_key, alternate_key_column=None):
     filters = flask.request.args
     data = None
     try:
-        data = utils.json_request_data(flask.request.data)
+        data = flaskutils.json_request_data(flask.request.data)
     except exc.InvalidInput:
         pass
     found_id = None
